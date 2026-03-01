@@ -1,0 +1,7 @@
+vision-agents
+vision-agents-plugins-gemini
+vision-agents-plugins-getstream
+fastapi>=0.115.0
+uvicorn>=0.30.0
+python-dotenv>=1.0
+PyJWT>=2.8
