@@ -58,9 +58,12 @@ interface UseMetricsStreamOptions {
 
 let eventIdCounter = 0;
 
+const DEFAULT_WS_URL =
+  process.env.NEXT_PUBLIC_WS_URL ?? "ws://localhost:8080/ws/metrics";
+
 export function useMetricsStream(options: UseMetricsStreamOptions = {}) {
   const {
-    url = "ws://localhost:8080/ws/metrics",
+    url = DEFAULT_WS_URL,
     autoConnect = true,
     maxReconnectAttempts = 10,
   } = options;

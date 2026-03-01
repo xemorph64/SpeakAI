@@ -138,8 +138,9 @@ export default function StreamCallPanel({
     }
 
     try {
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL ?? "http://localhost:8080";
       const response = await fetch(
-        `http://localhost:8080/token?user_id=${encodeURIComponent(userId)}`
+        `${backendUrl}/token?user_id=${encodeURIComponent(userId)}`
       );
       const data = (await response.json()) as {
         token?: string;

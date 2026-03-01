@@ -146,7 +146,7 @@ function DashboardPage() {
     transcript,
     conversationState,
     sendMessage,
-  } = useMetricsStream({ url: "ws://localhost:8080/ws/metrics", autoConnect: false });
+  } = useMetricsStream({ autoConnect: false });
 
   // Auto-connect on mount
   useEffect(() => {
